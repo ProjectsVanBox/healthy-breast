@@ -5,10 +5,11 @@
 
 module load bcftools
 ### filter initial file by PASS, biallelic SNPs
-IAP_NAME=$1
-mkdir ./3_Output/Breast_1/filtered_PTA/downstream
-cd ./3_Output/Breast_1/filtered_PTA/downstream
-bcftools view -Oz -f PASS -m2 -M2 -v snps ./$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
+$home_dir = $1
+IAP_NAME=$2
+mkdir $home_dir/3_Output/Breast_1/filtered_PTA/downstream
+cd $home_dir/3_Output/Breast_1/filtered_PTA/downstream
+bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast_1/filtered_PTA//$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
 bcftools index biall_snps.vcf.gz
 
 ### overlap with common callable regions
