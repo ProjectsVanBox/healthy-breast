@@ -21,8 +21,6 @@ bcftools merge -Oz PTA_WGS_0.2_PON_S8506Nr3.snvs.ptato.vcf.gz PTA_WGS_0.2_PON_S8
 
 cd $home_dir/3_Output/Breast_1/filtered_PTA/downstream/
 
-Rscript $home_dir/2_Code/dbSNP_remove_PTATO.R
-
 tabix -p vcf PTATO_filtered.vcf.gz
 tabix -p vcf PTATO_flagged.vcf.gz
 tabix -p vcf biall_snps.vcf.gz
