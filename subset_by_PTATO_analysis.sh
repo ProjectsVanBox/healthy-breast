@@ -29,4 +29,3 @@ tabix -p vcf biall_snps.vcf.gz
 bcftools isec -p matrix_intersect PTATO_filtered.vcf.gz biall_snps.vcf.gz
 bcftools view -R matrix_intersect/0002.vcf biall_snps.vcf.gz -Oz -o matrix.vcf.gz
 bcftools index matrix.vcf.gz
-
