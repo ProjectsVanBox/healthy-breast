@@ -5,7 +5,7 @@ library(stringr)
 library(ggplot2)
 library(data.table)
 
-### pass home_dif
+### pass home_dir
 args <- commandArgs(trailingOnly = TRUE)
 
 vcf<-readVcf(paste0(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix.vcf.gz"))
