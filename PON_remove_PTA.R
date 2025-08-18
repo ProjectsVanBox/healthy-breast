@@ -6,7 +6,7 @@ library(VariantAnnotation)
 args <- commandArgs(trailingOnly = TRUE)
 
 vcf_file = paste0(args[1],"/3_Output/Breast_1/filtered_PTA/downstream/final_filtered_0.2_biall.vcf.gz")
-vcf_pon = 'HMF_PON_LOCATION'
+vcf_pon = c("HMF_PON_LOCATION")
 
 vcf <- readVcf(vcf_file)
 
