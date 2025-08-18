@@ -39,8 +39,8 @@ bcftools index S8506Nr6.vcf.gz
 ### find common variants in 2 or more samples
 bcftools isec -Oz -n+2 S8506Nr1.vcf.gz_0.2.vcf.gz S8506Nr2.vcf.gz_0.2.vcf.gz S8506Nr3.vcf.gz S8506Nr4.vcf.gz S8506Nr5.vcf.gz S8506Nr6.vcf.gz > variants_02.txt
 
-### subset variants file by list of exclusions and turn it to positions list
-grep -v -f remove.txt variants_02.txt > variants_02_filt.txt
+### subset variants file by list of exclusions (variant present in all samples or present in all except one (5/6)) and turn it to positions list
+grep -v -f $home_dir/2_Code/remove.txt variants_02.txt > variants_02_filt.txt
 grep -v -E "decoy|EBV" variants_02_filt.txt > variants_02_filt_2.txt
 awk '{OFS="\t"; print $1,$2}' variants_02_filt_2.txt > pos_02_filt.tsv
 
