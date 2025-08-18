@@ -1,9 +1,10 @@
 #!/bin/bash
 #SBATCH -t 6:0:0
 #SBATCH -c 4
-#SBATCH --mem=30G
+#SBATCH --mem=60G
 
 module load bcftools
+module load R
 ### filter initial file by PASS, biallelic SNPs
 home_dir=$1
 IAP_NAME=$2
