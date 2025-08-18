@@ -1,3 +1,8 @@
+#!/bin/bash
+
+#SBATCH --time=24:0:0
+#SBATCH --mem=60G 
+
 # batch 1 analysis
 # PART1
 home_dir = $1
