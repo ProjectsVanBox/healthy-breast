@@ -9,7 +9,7 @@ For the WGS + PTA data (Breast_1):
 
 1. Run callable_loci_PTA_estimate.sh (here and below always specify the home_dir argument by passing the absolute path to the whole folder of this repository to sbatch after the script name (no specific name, encoded as $1); check the script(s) for more information)
 2. Run callable_loci_PTA_overlap.sh
-3. Run NF-IAP from the corresponding repository: https://github.com/ToolsVanBox/NF-IAP starting with BAM files from dbGAP and store the results in $home_dir/3_Output/Breast1/NF-IAP
+3. Run NF-IAP from the corresponding repository: https://github.com/ToolsVanBox/NF-IAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast1/NF-IAP
 4. Run downstream_PTA_analysis.sh (pass the NF-IAP VCF name to the script in addition to home_dir (treat is as $2)). 
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see ***)
