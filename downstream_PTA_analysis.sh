@@ -5,11 +5,12 @@
 
 module load bcftools
 module load R
-### filter initial file by PASS, biallelic SNPs
 home_dir=$1
 IAP_NAME=$2
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
 cd "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
+
+### filter initial file by PASS, biallelic SNPs
 bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast1/NF-IAP/VCFS/VCF/$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
 bcftools index biall_snps.vcf.gz
 
