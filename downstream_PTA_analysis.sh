@@ -11,7 +11,7 @@ mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
 cd "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
 
 ### filter initial file by PASS, biallelic SNPs
-bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast1/NF-IAP/VCFS/VCF/$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
+bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast_1/NF-IAP/VCFS/VCF/$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
 bcftools index biall_snps.vcf.gz
 
 ### overlap with common callable regions
@@ -48,4 +48,4 @@ awk '{OFS="\t"; print $1,$2}' variants_02_filt_2.txt > pos_02_filt.tsv
 bcftools view -Oz -R pos_02_filt.tsv biall_snps.vcf.gz > final_filtered_0.2_biall.vcf.gz
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/"
 Rscript "$home_dir/2_Code/PON_remove_PTA.R" ### modify this Rscript by adding the HMF panel of normals file location
-mkdir "$home_dir/3_Output/filtered_PTA/PTATO_PON"
+mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/PTATO_PON"
