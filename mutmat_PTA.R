@@ -1,8 +1,6 @@
 library(VariantAnnotation)
 library(dplyr)
-library(biomaRt)
 library(stringr)
-library(ggplot2)
 library(data.table)
 
 ### pass home_dir
