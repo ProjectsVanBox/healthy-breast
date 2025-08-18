@@ -1,7 +1,7 @@
 # healthy-breast
 Scripts for collaborative project with Jacco van Rheenen's team, NKI
 
-Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), tabix, bcftools, bedtools
+Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis) + Java 1.8.0_60, tabix, bcftools, bedtools
 
 !NB Unpack the dbGAP BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
 
