@@ -14,8 +14,8 @@ For the WGS + PTA data (Breast_1):
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see ***)
 
-5. Run PTATO from the corresponding repository: https://github.com/ToolsVanBox/PTATO and VCF file from $home_dir/3_Output/filtered_PTA/PTATO_PON
-   When running PTATO, specify the output directory as $home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
+5. Run PTATO from the corresponding repository: https://github.com/ToolsVanBox/PTATO and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
+   When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
     ['Breast_2', 'S8506Nr2'],
