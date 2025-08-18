@@ -91,8 +91,3 @@ data$vars <- gsub("_.*", "", rownames(data))
 data<-data[,(1:14)]
 
 write.table(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix_mutations_PTA.txt")
-
-ggplot(data_cosmic_present, aes(x = Impact, y = Count, fill = Type))+
-  geom_bar(stat = "identity", position = "stack")+
-  labs(title = "COSMIC-annotated mutations distribution, absolute")+
-  theme_linedraw()
