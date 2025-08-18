@@ -8,7 +8,7 @@ library(data.table)
 ### pass home_dif
 args <- commandArgs(trailingOnly = TRUE)
 
-vcf<-readVcf(paste0(args[1],"/3_Output/filtered_PTA/downstream/matrix.vcf.gz"))
+vcf<-readVcf(paste0(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix.vcf.gz"))
 info <- info(vcf)
 csq<-info$ANN
 impact_modifier_indices <- sapply(csq, function(csq_entry) {
@@ -17,7 +17,7 @@ impact_modifier_indices <- sapply(csq, function(csq_entry) {
 vcf_impact_modifier <- vcf[impact_modifier_indices==TRUE, ]
 vcf<-vcf_impact_modifier
 
-writeVcf(vcf,paste0(args[1],"/3_Output/filtered_PTA/downstream/impact_vars.vcf.gz"))
+writeVcf(vcf,paste0(args[1],"/3_Output/Breast_1/filtered_PTA/downstream/impact_vars.vcf.gz"))
 
 seqnames <- seqnames(vcf)
 start_positions <- start(vcf)-1
@@ -90,7 +90,7 @@ data$vars <- gsub("_.*", "", rownames(data))
 
 data<-data[,(1:14)]
 
-write.table(args[1],"/3_Output/filtered_PTA/downstream/matrix_mutations_PTA.txt")
+write.table(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix_mutations_PTA.txt")
 
 ggplot(data_cosmic_present, aes(x = Impact, y = Count, fill = Type))+
   geom_bar(stat = "identity", position = "stack")+
