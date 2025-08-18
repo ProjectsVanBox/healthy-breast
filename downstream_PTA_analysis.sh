@@ -5,7 +5,7 @@
 
 module load bcftools
 ### filter initial file by PASS, biallelic SNPs
-$home_dir=$1
+home_dir=$1
 IAP_NAME=$2
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
 cd "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
