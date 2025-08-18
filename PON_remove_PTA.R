@@ -1,8 +1,6 @@
 ### Load libraries
-library(UpSetR)
-library(dplyr)
+BiocManager::install("VariantAnnotation")
 library(VariantAnnotation)
-library(stringr)
 
 ### pass home_dif
 args <- commandArgs(trailingOnly = TRUE)
