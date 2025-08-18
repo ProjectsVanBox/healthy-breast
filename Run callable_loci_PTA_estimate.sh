@@ -5,7 +5,7 @@
 
 # batch 1 analysis
 # PART1
-home_dir = $1
+home_dir= $1
 ## filtering common callable loci
 ### creating dirs
 mkdir -r $home_dir/3_Output/Breast_1/filtered_PTA/callable
