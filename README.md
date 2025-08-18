@@ -3,7 +3,7 @@ Scripts for collaborative project with Jacco van Rheenen's team, NKI
 
 Requirenments: R >= 4.3.0, GATK 3.8 (for callable_loci_analysis.sh) PTATO , ASAP->SMuRF-derived vcfs.
 
-NB! Unpack the dbGAP BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories).
+NB! Unpack the dbGAP BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
 
 For the WGS + PTA data (Breast_1):
 
