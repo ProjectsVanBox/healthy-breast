@@ -5,10 +5,10 @@
 
 module load bcftools
 ### filter initial file by PASS, biallelic SNPs
-$home_dir = $1
+$home_dir=$1
 IAP_NAME=$2
-mkdir $home_dir/3_Output/Breast_1/filtered_PTA/downstream
-cd $home_dir/3_Output/Breast_1/filtered_PTA/downstream
+mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
+cd "$home_dir/3_Output/Breast_1/filtered_PTA/downstream"
 bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast1/NF-IAP/VCFS/VCF/$IAP_NAME.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > biall_snps.vcf.gz
 bcftools index biall_snps.vcf.gz
 
@@ -44,6 +44,6 @@ awk '{OFS="\t"; print $1,$2}' variants_02_filt_2.txt > pos_02_filt.tsv
 
 ### subset initial VCF by positions list and remove PON variants
 bcftools view -Oz -R pos_02_filt.tsv biall_snps.vcf.gz > final_filtered_0.2_biall.vcf.gz
-mkdir $home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/
-Rscript $home_dir/2_Code/PON_remove_PTA.R
-mkdir $home_dir/3_Output/filtered_PTA/PTATO_PON
+mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/"
+Rscript "$home_dir/2_Code/PON_remove_PTA.R"
+mkdir "$home_dir/3_Output/filtered_PTA/PTATO_PON"
