@@ -1,7 +1,7 @@
 # healthy-breast
 Scripts for collaborative project with Jacco van Rheenen's team, NKI
 
-Requirenments: R >= 4.3.0, PTATO, ASAP->SMuRF-derived vcfs.
+Requirenments: R >= 4.3.0, GATK 3.8 (CallableLoci analysis) PTATO, ASAP->SMuRF-derived vcfs.
 
 For the WGS + PTA data (data batch 1):
 
