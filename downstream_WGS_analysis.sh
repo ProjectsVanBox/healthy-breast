@@ -10,7 +10,7 @@ ASAP_NAME=$2
 module load bcftools
 module load R
 
-mkdir "$home_dir/3_Output/Breast_2/filtered/downstream"
+mkdir -p "$home_dir/3_Output/Breast_2/filtered/downstream"
 cd "$home_dir/3_Output/Breast_2/filtered/downstream"
 
 bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast_2/ASAP/vcf/germline/somatic_filtering/SMuRF/$ASAP_NAME.vep.SMuRF.filtered.joined.vcf.gz > biall_snps.vcf.gz
