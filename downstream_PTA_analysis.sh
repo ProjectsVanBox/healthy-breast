@@ -47,7 +47,8 @@ awk '{OFS="\t"; print $1,$2}' variants_02_filt_2.txt > pos_02_filt.tsv
 ### subset initial VCF by positions list and remove PON variants
 bcftools view -Oz -R pos_02_filt.tsv biall_snps.vcf.gz > final_filtered_0.2_biall.vcf.gz
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/"
-Rscript "$home_dir/2_Code/PON_remove_PTA.R" $home_dir ### modify this Rscript by adding the HMF panel of normals file location
+bcftools query -f'%CHROM\t%POS0\t%END\n' dummy_PON.vcf > PON.bed ### modify this by adding the HMF panel of normals file location instead of dummy_PON.vcf
+bcftools view -T ^PON.bed -Oz -o "$home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/PTA_WGS_0.2_PON.vcf.gz" final_filtered_0.2_biall.vcf.gz
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/PTATO_PON"
 
 ### remove intermediate files (optional)
