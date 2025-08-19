@@ -1,7 +1,4 @@
 library(VariantAnnotation)
-library(dplyr)
-library(stringr)
-library(data.table)
 
 ### pass home_dir
 args <- commandArgs(trailingOnly = TRUE)
