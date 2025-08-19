@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -t 6:0:0
-#SBATCH -c 4
-#SBATCH --mem=60G
+#SBATCH -c 8
+#SBATCH --mem=100G
 
 module load bcftools
 module load R
