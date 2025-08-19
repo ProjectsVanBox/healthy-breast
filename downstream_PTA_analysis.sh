@@ -52,4 +52,4 @@ bcftools view -T ^PON.bed -Oz -o "$home_dir/3_Output/Breast_1/filtered_PTA/Breas
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/PTATO_PON"
 
 ### remove intermediate files (optional)
-#rm S8506Nr* sample_names.txt variants_02.txt variants_02_filt.txt variants_02_filt_2.txt pos_02_filt.tsv
+#rm S8506Nr* sample_names.txt variants_02.txt variants_02_filt.txt variants_02_filt_2.txt pos_02_filt.tsv PON.bed
