@@ -87,3 +87,5 @@ colnames(data)[1:2]<-c("Gene name","Status")
 rownames(data)<-rownames(vcf)
 rows<-rownames(data)
 data$vars <- gsub("_.*", "", rownames(data))
+
+write.table(args[1],"3_Output/Breast_2/filtered/downstream/matrix_mutations_WGS.txt")
