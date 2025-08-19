@@ -50,5 +50,5 @@ mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/Breast_1/"
 Rscript "$home_dir/2_Code/PON_remove_PTA.R" $home_dir ### modify this Rscript by adding the HMF panel of normals file location
 mkdir "$home_dir/3_Output/Breast_1/filtered_PTA/PTATO_PON"
 
-### remove intermediate files
-rm S8506Nr* sample_names.txt variants_02.txt variants_02_filt.txt variants_02_filt_2.txt pos_02_filt.tsv
+### remove intermediate files (optional)
+#rm S8506Nr* sample_names.txt variants_02.txt variants_02_filt.txt variants_02_filt_2.txt pos_02_filt.tsv
