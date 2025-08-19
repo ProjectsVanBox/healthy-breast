@@ -21,6 +21,7 @@ For the WGS + PTA data (Breast_1):
     ['Breast_2', 'S8506Nr2'],
    
 6. Run subset_by_PTATO_output_analysis.sh
+7. Run Rscript mutmat_PTA.R $home_dir (or pass home_dir explicitly).
 
 For the WGS data (Breast_2):
 
