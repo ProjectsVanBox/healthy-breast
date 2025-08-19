@@ -1,7 +1,7 @@
 library(VariantAnnotation)
 args <- commandArgs(trailingOnly = TRUE)
 
-vcf<-readVcf(paste0(args[1],"/3_Output/Breast_2/filtered/downstream/matrix.vcf.gz"))
+vcf<-readVcf(paste0(args[1],"/3_Output/Breast_2/filtered/downstream/biall_snps_sorted.vcf.gz"))
 vcf <- vcf[(!duplicated(rownames(vcf))), ]
 info <- info(vcf)
 csq<-info$CSQ
