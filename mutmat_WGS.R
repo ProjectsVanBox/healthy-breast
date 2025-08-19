@@ -1,9 +1,11 @@
 library(VariantAnnotation)
+args <- commandArgs(trailingOnly = TRUE)
 
-vcf<-readVcf("~/hpc/pmc_vanboxtel/projects/_external_projects/vRheenen_LowInput/3_Output/filtered/biall_snps_sorted.vcf.gz")
+vcf<-readVcf(paste0(args[1],"/3_Output/Breast_2/filtered/downstream/matrix.vcf.gz"))
 vcf <- vcf[(!duplicated(rownames(vcf))), ]
 info <- info(vcf)
 csq<-info$CSQ
+
 impact_modifier_indices <- sapply(csq, function(csq_entry) {
   any(grepl("HIGH|MODIFIER|MODERATE", csq_entry))
 })
@@ -14,7 +16,7 @@ print(sample_names)
 sample_to_keep <- setdiff(sample_names, "wgs_S11340Nr1")
 vcf<-vcf[,sample_to_keep]
 
-writeVcf(vcf,"~/hpc/pmc_vanboxtel/projects/_external_projects/vRheenen_LowInput/3_Output/filtered/impact_vars.vcf.gz")
+writeVcf(vcf,(paste0(args[1],"/3_Output/Breast_2/filtered/downstream/impact_vars.vcf.gz")))
 
 seqnames <- seqnames(vcf)
 start_positions <- start(vcf)-1
