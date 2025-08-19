@@ -6,7 +6,7 @@ library(data.table)
 ### pass home_dir
 args <- commandArgs(trailingOnly = TRUE)
 
-vcf<-readVcf(paste0(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix.vcf.gz"))
+vcf<-readVcf(paste0(args[1],"/3_Output/Breast_1/filtered_PTA/downstream/matrix.vcf.gz"))
 info <- info(vcf)
 csq<-info$ANN
 impact_modifier_indices <- sapply(csq, function(csq_entry) {
@@ -88,4 +88,4 @@ data$vars <- gsub("_.*", "", rownames(data))
 
 data<-data[,(1:14)]
 
-write.table(args[1],"3_Output/Breast_1/filtered_PTA/downstream/matrix_mutations_PTA.txt")
+write.table(data,paste0(args[1],"/3_Output/Breast_1/filtered_PTA/downstream/matrix_mutations_PTA.txt"))
