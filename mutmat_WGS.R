@@ -88,4 +88,4 @@ rownames(data)<-rownames(vcf)
 rows<-rownames(data)
 data$vars <- gsub("_.*", "", rownames(data))
 
-write.table(args[1],"3_Output/Breast_2/filtered/downstream/matrix_mutations_WGS.txt")
+write.table(data,paste0(args[1],"/3_Output/Breast_2/filtered/downstream/matrix_mutations_WGS.txt"))
