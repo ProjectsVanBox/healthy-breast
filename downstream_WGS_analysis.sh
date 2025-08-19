@@ -10,9 +10,6 @@ ASAP_NAME=$2
 module load bcftools
 module load R
 
-cd "$home_dir/3_Output/Breast_2/ASAP/vcf/germline/somatic_filtering/SMuRF/"
-bgzip $ASAP_NAME.vep.SMuRF.filtered.joined.vcf
-
 mkdir "$home_dir/3_Output/Breast_2/filtered/downstream"
 cd "$home_dir/3_Output/Breast_2/filtered/downstream"
 
@@ -20,4 +17,4 @@ bcftools view -Oz -f PASS -m2 -M2 -v snps $home_dir/3_Output/Breast_2/ASAP/vcf/g
 bcftools sort -Oz biall_snps.vcf.gz > biall_snps_sorted.vcf.gz
 bcftools index biall_snps_sorted.vcf.gz
 
-Rscript mutmat_WGS.R $home_dir
+Rscript "$home_dir/2_Code/mutmat_WGS.R" $home_dir
