@@ -83,6 +83,4 @@ rownames(data)<-rownames(vcf)
 rows<-rownames(data)
 data$vars <- gsub("_.*", "", rownames(data))
 
-data<-data[,(1:14)]
-
 write.table(data,paste0(args[1],"/3_Output/Breast_1/filtered_PTA/downstream/matrix_mutations_PTA.txt"))
