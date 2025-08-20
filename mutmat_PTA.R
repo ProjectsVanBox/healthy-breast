@@ -30,7 +30,7 @@ ad <- geno(vcf)$AD
 
 s<-ad[,1]
 ads<-c()
-for (j in c(1:341)){
+for (j in c(1:346)){
   x<-paste0(s[[j]][2],"/",s[[j]][1]+s[[j]][2])
   ads<-c(ads,x)
 }
@@ -40,7 +40,7 @@ colnames(ad_df)<-colnames(vcf)[1]
 for (i in c(2:6)){
   s<-ad[,i]
   ads<-c()
-  for (j in c(1:341)){
+  for (j in c(1:346)){
     x<-paste0(s[[j]][2],"/",s[[j]][1]+s[[j]][2])
     ads<-c(ads,x)
   }
