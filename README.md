@@ -12,7 +12,7 @@ For the WGS + PTA data (Breast_1):
 3. Run NF-IAP 1.3.0 from the corresponding repository: https://github.com/ToolsVanBox/NF-IAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_1/NF-IAP
 4. Run downstream_PTA_analysis.sh (pass the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2)). 
 
-!NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see ***)
+!NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
 5. Run PTATO 1.2.0 from the corresponding repository: https://github.com/ToolsVanBox/PTATO and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
