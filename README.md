@@ -25,5 +25,5 @@ For the WGS + PTA data (Breast_1):
 
 For the WGS data (Breast_2):
 
-1. Run ASAP from the corresponding repository: *** starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
+1. Run ASAP from the corresponding repository: https://github.com/ToolsVanBox/ASAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
 2. Run downstream_WGS_analysis.sh (pass the ASAP VCF name ID to the script in addition to home_dir (treat is as $2)).
