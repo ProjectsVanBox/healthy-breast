@@ -1,5 +1,4 @@
 # healthy-breast
-Scripts for collaborative project with Jacco van Rheenen's team, NKI
 
 Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis) + Java 1.8.0_60, tabix, bcftools, bedtools
 
