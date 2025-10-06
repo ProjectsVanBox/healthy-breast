@@ -35,7 +35,7 @@ You can easily install this repository via git clone. For the installation of th
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
-5. Run PTATO from the corresponding repository and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
+5. Run PTATO from the corresponding repository using VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
@@ -59,7 +59,7 @@ You can easily install this repository via git clone. For the installation of th
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
-2. Run PTATO 1.2.0 from the corresponding repository: https://github.com/ToolsVanBox/PTATO and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
+2. Run PTATO from the corresponding repository using VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
