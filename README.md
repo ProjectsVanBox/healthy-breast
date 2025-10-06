@@ -24,7 +24,7 @@ You can easily install this repository via git clone. For the installation of th
 
 ## Reproducing from the BAM files (with EGA data)
 
-!NB Unpack the EGA BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
+*!NB* - unpack the EGA BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
 
 *EGA accession ID is TBA*
 
@@ -35,7 +35,7 @@ You can easily install this repository via git clone. For the installation of th
 3. Run NF-IAP from the corresponding repository starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_1/NF-IAP
 4. Run downstream_PTA_analysis.sh (pass the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2)). 
 
-!NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
+*!NB* - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
 5. Run PTATO from the corresponding repository using VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
@@ -53,13 +53,13 @@ You can easily install this repository via git clone. For the installation of th
 
 ## Reproducing from the VCF files (with Mendeley data)
 
-!Copy all the VCFs directories from the Mendeley dataset (Kulaeva, Elizaveta (2025), “Puberty as a Superspreader of Mutations Elevating Tumor Long-term Risk in Breast Tissue”, Mendeley Data, V1, doi: 10.17632/9ynwrjw3rk.1) to /home_dir/3_Output.
+*!NB* - copy all the VCFs directories from the Mendeley dataset (Kulaeva, Elizaveta (2025), “Puberty as a Superspreader of Mutations Elevating Tumor Long-term Risk in Breast Tissue”, Mendeley Data, V1, doi: 10.17632/9ynwrjw3rk.1) to /home_dir/3_Output.
 
 ### For the WGS + PTA data (Breast_1): 
 
 1. Run downstream_PTA_analysis.sh (pass "230718_vRheenen" as the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2))
 
-!NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
+*!NB* - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
 2. Run PTATO from the corresponding repository using VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
