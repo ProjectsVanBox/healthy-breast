@@ -48,4 +48,4 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 ## For the WGS data (Breast_2):
 
-1. Run downstream_WGS_analysis.sh (pass the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2)).
+1. Run downstream_WGS_analysis.sh (pass the "HealthyBreast" VCF name ID to the script in addition to home_dir (treat is as $2)).
