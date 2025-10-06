@@ -53,7 +53,7 @@ You can easily install this repository via git clone. For the installation of th
 
 ## Reproducing from the VCF files (with Mendeley data)
 
-!Copy all the VCFs directories from the Mendeley repository (*link is TBA till 09/10/2025*) to /home_dir/3_Output.
+!Copy all the VCFs directories from the Mendeley dataset (Kulaeva, Elizaveta (2025), “Puberty as a Superspreader of Mutations Elevating Tumor Long-term Risk in Breast Tissue”, Mendeley Data, V1, doi: 10.17632/9ynwrjw3rk.1) to /home_dir/3_Output.
 
 ### For the WGS + PTA data (Breast_1): 
 
