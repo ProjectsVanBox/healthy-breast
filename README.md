@@ -20,7 +20,7 @@ It is preferred to use an HPC unit when running NF-IAP, ASAP and PTATO with the 
 
 ## Installation
 
-You can easily install this repository via git clone. For the installation of the all software mentioned earlier follow the instructions given in the corresponding Github repositories.
+You can easily install this repository via git clone. For the installation of the all software mentioned earlier follow the instructions given in the corresponding Github repositories. The installation of all the required software may take up to 3 hours.
 
 ## Reproducing from the BAM files (with EGA data)
 
