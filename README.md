@@ -19,14 +19,14 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
-    ['Breast_2', 'S8506Nr2'],
+    ['Breast_1', 'S8506Nr2'],
    
 6. Run subset_by_PTATO_output_analysis.sh
 7. Run Rscript mutmat_PTA.R $home_dir (or pass home_dir explicitly).
 
 ## For the WGS data (Breast_2):
 
-1. Run ASAP from the corresponding repository: https://github.com/ToolsVanBox/ASAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
+1. Run ASAP 1.0.3 from the corresponding repository: https://github.com/ToolsVanBox/ASAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
 2. Run downstream_WGS_analysis.sh (pass the ASAP VCF name ID to the script in addition to home_dir (treat is as $2)).
 
 # For reproducing from the VCF files (with Mendeley data):
@@ -41,7 +41,7 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
-    ['Breast_2', 'S8506Nr2'],
+    ['Breast_1', 'S8506Nr2'],
    
 3. Run subset_by_PTATO_output_analysis.sh
 4. Run Rscript mutmat_PTA.R $home_dir (or pass home_dir explicitly).
