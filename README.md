@@ -1,6 +1,10 @@
 # healthy-breast
 
-Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60, tabix 1.22.1, bcftools 1.17, bedtools v2.31.1
+Requirenments: Rocky Linux 8.10, R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60, tabix 1.22.1, bcftools 1.17, bedtools v2.31.1, NF-IAP 1.3.0 (https://github.com/ToolsVanBox/NF-IAP), ASAP 1.0.3 (https://github.com/ToolsVanBox/ASAP) and PTATO 1.2.0 (https://github.com/ToolsVanBox/PTATO).
+
+Hardware: it is preferred to use an HPC unit when running NF-IAP, ASAP and PTATO with the requirenments specified for each software.
+
+Installation: install this repository via git clone. For the installation of the all mentioned in this repository software, follow the instructions given in the corresponding Github repositories.
 
 # For reproducing from the BAM files (with EGA data)
 
@@ -10,12 +14,12 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 1. Run callable_loci_PTA_estimate.sh (here and below always specify the home_dir argument by passing the absolute path to the whole folder of this repository to sbatch after the script name (no specific name, encoded as $1); check the script(s) for more information)
 2. Run callable_loci_PTA_overlap.sh
-3. Run NF-IAP 1.3.0 from the corresponding repository: https://github.com/ToolsVanBox/NF-IAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_1/NF-IAP
+3. Run NF-IAP from the corresponding repository starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_1/NF-IAP
 4. Run downstream_PTA_analysis.sh (pass the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2)). 
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
-5. Run PTATO 1.2.0 from the corresponding repository: https://github.com/ToolsVanBox/PTATO and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
+5. Run PTATO from the corresponding repository and VCF file from /home_dir/3_Output/filtered_PTA/PTATO_PON
    When running PTATO, specify the output directory as /home_dir/3_Output/filtered_PTA/PTATO_PON and bulk_names parameter as:
    bulk_names = [
     ['Breast_1', 'S8506Nr1'],
@@ -26,7 +30,7 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 ## For the WGS data (Breast_2):
 
-1. Run ASAP 1.0.3 from the corresponding repository: https://github.com/ToolsVanBox/ASAP starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
+1. Run ASAP from the corresponding repository starting with BAM files from dbGAP and store the results in /home_dir/3_Output/Breast_2/ASAP
 2. Run downstream_WGS_analysis.sh (pass the ASAP VCF name ID to the script in addition to home_dir (treat is as $2)).
 
 # For reproducing from the VCF files (with Mendeley data)
