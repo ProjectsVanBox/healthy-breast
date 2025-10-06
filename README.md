@@ -33,7 +33,7 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 ## For the WGS + PTA data (Breast_1): 
 
-1. Run downstream_PTA_analysis.sh (pass the full VCF name to the script in addition to home_dir (treat is as $2))
+1. Run downstream_PTA_analysis.sh (pass "230718_vRheenen" as the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2))
 
 !NB - replace the dummy panel of normals (PON) HMF location file to the actual full path of this file (to obtain PON HMF file, see https://pmc.ncbi.nlm.nih.gov/articles/PMC6872491/, Preservation of known variant in Supplementary information)
 
@@ -48,4 +48,4 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 ## For the WGS data (Breast_2):
 
-1. Run downstream_WGS_analysis.sh (pass the full VCF name ID to the script in addition to home_dir (treat is as $2)).
+1. Run downstream_WGS_analysis.sh (pass the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2)).
