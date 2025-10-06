@@ -26,7 +26,7 @@ You can easily install this repository via git clone. For the installation of th
 
 !NB Unpack the EGA BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
 
-*EGA accession ID number is TBA*
+*EGA accession ID is TBA*
 
 ### For the WGS + PTA data (Breast_1):
 
