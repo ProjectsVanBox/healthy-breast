@@ -26,6 +26,8 @@ You can easily install this repository via git clone. For the installation of th
 
 !NB Unpack the EGA BAM files archive into the created directory ./1_Input (it should display Breast_1 and Breast_2 directories); unpack the githib code to ./2_Code
 
+*EGA accession ID number is TBA*
+
 ### For the WGS + PTA data (Breast_1):
 
 1. Run callable_loci_PTA_estimate.sh (here and below always specify the home_dir argument by passing the absolute path to the whole folder of this repository to sbatch after the script name (no specific name, encoded as $1); check the script(s) for more information)
@@ -51,7 +53,7 @@ You can easily install this repository via git clone. For the installation of th
 
 ## Reproducing from the VCF files (with Mendeley data)
 
-!Copy all the VCFs directories from the Mendeley repository (link) to /home_dir/3_Output.
+!Copy all the VCFs directories from the Mendeley repository (*link is TBA till 09/10/2025*) to /home_dir/3_Output.
 
 ### For the WGS + PTA data (Breast_1): 
 
