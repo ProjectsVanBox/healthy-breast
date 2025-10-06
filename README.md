@@ -31,6 +31,8 @@ Requirenments: R >= 4.3.0, GATK 3.8 (for callable loci analysis), Java 1.8.0_60,
 
 # For reproducing from the VCF files (with Mendeley data)
 
+!Copy all the VCFs directories from the Mendeley repository (link) to /home_dir/3_Output.
+
 ## For the WGS + PTA data (Breast_1): 
 
 1. Run downstream_PTA_analysis.sh (pass "230718_vRheenen" as the NF-IAP VCF name ID to the script in addition to home_dir (treat is as $2))
