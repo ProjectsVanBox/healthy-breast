@@ -4,7 +4,8 @@
 
 ### Software
 
-- Rocky Linux 8.10, R >= 4.3.0;
+- Rocky Linux 8.10;
+- R >= 4.3.0;
 - GATK 3.8 (for callable loci analysis);
 - Java 1.8.0_60;
 - tabix 1.22.1;
